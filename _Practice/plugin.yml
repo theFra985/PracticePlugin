@@ -1,0 +1,109 @@
+name: Practice
+main: it.fastersetup.practice.Main
+version: 1.0
+description: Practice by FasterSetup.it
+author: theFra985
+database: false
+prefix: Practice
+
+commands:
+  debug:
+  settings:
+    description: Admin command for settings
+  party:
+    description: Party command
+    aliases: p
+  pc:
+    description: Chat to your party.
+  arena:
+    description: Admin arena command
+  duel:
+    description: Duel command
+  accept:
+    description: Accept duel request
+  deny:
+    description: Deny duel request
+  spawn:
+    description: Teleport to spawn
+  spectate:
+    description: Spectate a player
+    aliases: spec
+  ranks:
+    description: Admin ranks command
+  matches:
+    description: Gift matches command
+  ban:
+    description: Ban a player
+  banip:
+    description: Ban an IP
+  tempban:
+    description: Temp-ban a player
+  unban:
+    description: Unban a plyer
+  unbanip:
+    description: Unban an IP
+  mute:
+    description: Mute a player
+  tempmute:
+    description: Temp-mute a plyer
+  unmute:
+    description: Unmute a player
+  kick:
+    description: Kick a player
+  msg:
+    description: Send a message to a player
+    aliases: [m, t, tell, w, whisper]
+  r:
+    description: Reply to the last person that messaged you
+    aliases: reply
+  spy:
+    description: View private messages
+  ignore:
+    description: Ignore/Unignore a player
+  unignore:
+    description: Unignore a player
+  tp:
+    description: Teleport to a player
+  pvpv:
+    description: Plugin version
+  coins:
+    description: Give coins to a player
+
+permissions:
+  pvpcoin.*:
+    default: false
+    children:
+      pvpcoin.cmd.*: true
+  pvpcoin.cmd.*:
+    default: false
+    children:
+      pvpcoin.cmd.ban: true
+      pvpcoin.cmd.banip: true
+      pvpcoin.cmd.tempban: true
+      pvpcoin.cmd.unban: true
+      pvpcoin.cmd.unbanip: true
+      pvpcoin.cmd.mute: true
+      pvpcoin.cmd.tempmute: true
+      pvpcoin.cmd.unmute: true
+      pvpcoin.cmd.kick: true
+      pvpcoin.cmd.spy: true
+  pvpcoin.cmd.ban:
+    default: false
+  pvpcoin.cmd.banip:
+    default: false
+  pvpcoin.cmd.tempban:
+    default: false
+  pvpcoin.cmd.unban:
+    default: false
+  pvpcoin.cmd.unbanip:
+    default: false
+  pvpcoin.cmd.mute:
+    default: false
+  pvpcoin.cmd.tempmute:
+    default: false
+  pvpcoin.cmd.unmute:
+    default: false
+  pvpcoin.cmd.kick:
+    default: false
+  pvpcoin.cmd.spy:
+    default: false
