@@ -16,8 +16,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
 import it.fastersetup.practice.Main;
+import it.fastersetup.practice.Api.Invs;
 
 public class CMDSettings
 implements CommandExecutor {
@@ -75,6 +75,9 @@ implements CommandExecutor {
                 } else {
                     player.sendMessage("\u00a7eToo many arguments.");
                 }
+            } else if (args[0].equalsIgnoreCase("items")){
+            	player.getInventory().setContents(Invs.main(player.getName()));
+            	player.sendMessage("\u00a7eGetted");
             } else {
                 player.sendMessage("\u00a7eUnknown argument");
             }
